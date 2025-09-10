@@ -6,7 +6,7 @@
 
 ::root {
     --main-color: #000;
-    --main-white:#fff;
+    --main-white: #fff;
     --main-font: 'Times New Roman', Times, serif;
 }
 
@@ -20,22 +20,35 @@ body {
     color: var(--main-color);
     min-height: 100vh;
     line-height: 1.5;
-    padding: 0 168px;
+    padding: 0 168px; 
+        /* padding: clamp(32px, 8vw, 62px) clamp(40px, 12vw, 91px); */
     background-color: #000;
 }
 
 main>section {
     background-color: #fff;
-    padding: 62px 91px;
+    /* padding: 62px 91px; */
+    padding: clamp(32px, 8vw, 62px) clamp(40px, 12vw, 91px);
 }
 
 h1 {
     font-size: 5.1rem;
 }
 
+a {
+    color: #000;
+    ;
+}
+
 hr {
     background-color: black;
     height: 3px;
+}
+
+.flexy_bet{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
 }
 
 .grid {
@@ -57,4 +70,12 @@ hr {
 
 .text_end {
     text-align: end;
+}
+
+h1 {
+    font-size: clamp(3rem, 2.5vw, 5.1rem);
+}
+
+.mt_13{
+    margin-top: 13px;
 }
